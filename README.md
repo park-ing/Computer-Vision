@@ -1,3 +1,3 @@
 # Computer-Vision
 
-### 📝 open-cv, yolo, cnn study
+### 📝 open-cv, yolo, cnn study w
