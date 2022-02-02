@@ -40,3 +40,5 @@ while True:
     idx += 1
     if idx >= cnt:
         idx = 0
+
+# 맥에서는 전체화면 부분이 이상하다..
