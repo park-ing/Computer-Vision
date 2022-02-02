@@ -11,6 +11,7 @@ if img is None:                     # 영상 파일 불러오기가 실패하면
 
 cv2.namedWindow('image')            # "image"라는 이름의 새 창을 만들고, 이 창에 img영상을 출력하고, 키보드 입력이 있을 때까지 대기.
 cv2.imshow('image', img)
-cv2.waitKey()
+key = cv2.waitKey(2000)             # 2초 있다가 창 종료
+print(key)                          # 눌린 키 값의 ASCII code 출력
 
 cv2.destroyAllWindows()             # 생성된 모든 창을 닫음.
