@@ -18,7 +18,7 @@ cv2.waitKey()
 # 전체 화면 영상 출력 창 만들기
 # 먼저 cv2.WINDOW_NORMAL 속성의 창을 만든 후, cv2.setWindowProperty() 함수를 사용하여 전체 화면 속성으로 변경
 cv2.namedWindow('image', cv2.WINDOW_NORMAL)
-cv2.setWindowProperty('image', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+cv2.setWindowProperty('image', cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN) #-> 잘못 실행하면 화면 검은화면으로 변경되어.. 제일 마지막에 확인 요망
 
 # 불러온 영상을 반복적으로 출력하기
 cnt = len(img_files)
