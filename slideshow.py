@@ -42,3 +42,4 @@ while True:
         idx = 0
 
 # 맥에서는 전체화면 부분이 이상하다..
+# fililililllllisadlf
