@@ -17,3 +17,4 @@ print(key)                          # 눌린 키 값의 ASCII code 출력
 cv2.destroyAllWindows()             # 생성된 모든 창을 닫음.
 
 print('start')
+
