@@ -18,3 +18,4 @@ cv2.destroyAllWindows()             # 생성된 모든 창을 닫음.
 
 print('start')
 
+print('end')
