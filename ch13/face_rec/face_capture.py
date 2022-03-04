@@ -28,14 +28,15 @@ def save_face(frame, p1, p2, filename):
 
 
 # Video Capture
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture("호날두골.mp4") # 영상 사용하려면 '0'말고 영상 파일 이름 사용
 
 if not cap.isOpened():
     print('Camera open failed!')
     sys.exit()
 
 # Network
-
+#model = os.path.join(os.getcwd(), 'face_detector', 'res10_300x300_ssd_iter_140000_fp16.caffemodel')
+#config = os.path.join(os.getcwd(), 'face_detector', 'deploy.prototxt')
 model = '../opencv_face_detector/res10_300x300_ssd_iter_140000_fp16.caffemodel'
 config = '../opencv_face_detector/deploy.prototxt'
 
@@ -82,7 +83,7 @@ while True:
 
     for i in range(detect.shape[0]):
         confidence = detect[i, 2]
-        if confidence < 0.8:
+        if confidence < 0.2:
             break
 
 		# Face found!
@@ -98,10 +99,10 @@ while True:
 
         if cnt % 10 == 0:
             filename = '{0}{1:04d}.png'.format(prefix, file_idx)
-            save_face(frame, (x1, y1), (x2, y2), filename)
+            # save_face(frame, (x1, y1), (x2, y2), filename)
             file_idx += 1
 
-        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0))
+        cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 255))
 
         label = 'Face: %4.3f' % confidence
         cv2.putText(frame, label, (x1, y1 - 1),
